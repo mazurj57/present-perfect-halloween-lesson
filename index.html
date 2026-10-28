@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101915">
+  <meta name="description" content="An interactive Halloween lesson for practising the Present Perfect and its marker words.">
+  <title>Halloween Present Perfect Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="overrides.css">
+</head>
+<body>
+  <div class="glow glow-a"></div><div class="glow glow-b"></div>
+  <header class="masthead wrap">
+    <div><p class="eyebrow">Grammar · Present Perfect · Halloween</p><h1>What has Maya<br><em>done so far?</em></h1></div>
+    <div class="moon" aria-hidden="true"><span>31</span><small>OCT</small></div>
+    <p class="intro">Notice the pattern, remember the markers, test the form and finish with your own spoken Halloween update.</p>
+  </header>
+
+  <nav class="stage-nav wrap" id="stageNav" aria-label="Lesson stages">
+    <button class="active" data-stage="0"><span>0</span> Find</button>
+    <button data-stage="1"><span>1</span> Remember</button>
+    <button data-stage="2"><span>2</span> Understand</button>
+    <button data-stage="3"><span>3</span> Apply</button>
+    <button data-stage="4"><span>4</span> Analyse</button>
+    <button data-stage="5"><span>5</span> Speak</button>
+    <button data-stage="6"><span>6</span> Create</button>
+    <button class="results-tab" data-stage="results"><span>★</span> My results</button>
+  </nav>
+
+  <main class="wrap">
+    <section class="stage active" data-panel="0">
+      <div class="stage-head"><div><p class="kicker">NOTICE</p><h2>Find the Present Perfect</h2><p><b>Goal:</b> read for the main idea, then click every complete Present Perfect phrase you notice. Nothing is highlighted in advance.</p></div><button class="ghost" data-reset="find">↺ Try again</button></div>
+      <div class="progress-row"><strong id="findCount">Found 0 / 14</strong><div class="progress"><i id="findBar"></i></div></div>
+      <article class="reading-card" id="readingText">
+        <h3>Maya’s Halloween week</h3>
+        <p>This week <span class="target" data-form="A">has been unusual</span>. Last Saturday, I bought orange paper at the market and spent the evening cutting out bats. Since then, <span class="target" data-form="A">I’ve already decorated my house</span> and <span class="target" data-form="A">I’ve just made a Halloween lantern</span>. However, <span class="target" data-form="N">I haven’t carved a pumpkin yet</span>.</p>
+        <p>Yesterday, my friend called me after school. She <span class="target" data-form="A">has invited me to a Halloween party</span>. She <span class="target" data-form="A">has already chosen her costume</span>, but <span class="target" data-form="N">I haven’t decided what to wear yet</span>. When I was ten, I wore a vampire costume and won a small prize, but <span class="target" data-form="N">I’ve never dressed up as a witch before</span>. Maybe I can try it this year!</p>
+        <p><span class="target" data-form="Q">Have you ever visited a haunted house?</span> <span class="target" data-form="N">I haven’t</span>, but <span class="target" data-form="A">I’ve recently watched several videos about haunted places</span>. <span class="target" data-form="A">They have been quite scary</span>! <span class="target" data-form="A">So far, I’ve watched two horror films</span>, but <span class="target" data-form="N">I haven’t seen a ghost</span>.</p>
+      </article>
+      <div class="form-key"><span><i class="a"></i>A · affirmative</span><span><i class="n"></i>N · negative</span><span><i class="q"></i>Q · question</span><small>The form label appears only after you find a phrase.</small></div>
+      <div class="find-tools">
+        <button class="ghost" id="showMissed">Show the ones I missed</button>
+        <details class="reference-list">
+          <summary>Reference list</summary>
+          <table>
+            <thead><tr><th>Form or marker</th><th>Meaning and use</th></tr></thead>
+            <tbody>
+              <tr><td>have / has + past participle</td><td>A past action connected to now, an unfinished time, or a life experience.</td></tr>
+              <tr><td>already</td><td>Earlier than expected; usually in affirmative sentences.</td></tr>
+              <tr><td>just</td><td>A very short time ago.</td></tr>
+              <tr><td>yet</td><td>Until now; usually in questions and negatives, at the end.</td></tr>
+              <tr><td>ever / never</td><td>At any time / at no time in someone’s life.</td></tr>
+              <tr><td>before</td><td>Earlier than now; often placed at the end.</td></tr>
+              <tr><td>recently</td><td>Not long ago.</td></tr>
+              <tr><td>so far</td><td>Until this point in time.</td></tr>
+            </tbody>
+          </table>
+        </details>
+      </div>
+      <div class="stage-actions"><span></span><button class="next" data-next="1">1 Remember →</button></div>
+    </section>
+
+    <section class="stage" data-panel="1">
+      <div class="stage-head"><div><p class="kicker">RETRIEVE</p><h2>Remember the markers</h2><p><b>Goal:</b> complete each marker from memory. Press Enter or choose Check.</p></div><button class="ghost" data-reset="markers">↺ Try again</button></div>
+      <div class="progress-row"><strong id="markerCount">0 / 8 correct</strong><div class="progress"><i id="markerBar"></i></div></div>
+      <div class="marker-grid" id="markerGrid"></div>
+      <div class="stage-actions"><button class="back" data-next="0">← 0 Find</button><button class="next" data-next="2">2 Understand →</button></div>
+    </section>
+
+    <section class="stage" data-panel="2">
+      <div class="stage-head"><div><p class="kicker">MEANING</p><h2>Understand</h2><p><b>Goal:</b> choose the closest meaning. Notice how the time marker changes the message.</p></div><button class="ghost" data-reset="understand">↺ Try again</button></div>
+      <div class="progress-row"><strong id="understandCount">1 / 8</strong><div class="progress"><i id="understandBar"></i></div></div>
+      <div id="understandCard"></div>
+      <div class="understand-controls"><button class="back" id="prevUnderstand">← Previous</button><button class="next" id="nextUnderstand">Next →</button></div>
+      <div class="stage-actions"><button class="back" data-next="1">← 1 Remember</button><button class="next" data-next="3">3 Apply →</button></div>
+    </section>
+
+    <section class="stage" data-panel="3">
+      <div class="stage-head"><div><p class="kicker">APPLY</p><h2>Build the correct verb form</h2><p><b>Goal:</b> type <em>have/has + the third form</em> of the verb. Add the marker where the hint asks for it.</p></div><button class="ghost" data-reset="apply">↺ Try again</button></div>
+      <div class="apply-toolbar"><button class="next" id="checkApply">Check answers</button><button class="ghost" id="showApplyAnswers">Show answers</button></div>
+      <div class="apply-form" id="applyForm"></div>
+      <div class="stage-actions"><button class="back" data-next="2">← 2 Understand</button><button class="next" data-next="4">4 Analyse →</button></div>
+    </section>
+
+    <section class="stage" data-panel="4">
+      <div class="stage-head"><div><p class="kicker">ANALYSE</p><h2>Correct or incorrect?</h2><p><b>Goal:</b> read each sentence aloud. Decide, then reveal the repair and the reason.</p></div><button class="ghost" data-reset="analyse">↺ Try again</button></div>
+      <div class="analysis-stack" id="analysisQuiz"></div>
+      <div class="stage-actions"><button class="back" data-next="3">← 3 Apply</button><button class="next" data-next="5">5 Speak →</button></div>
+    </section>
+
+    <section class="stage" data-panel="5">
+      <div class="stage-head"><div><p class="kicker">EVALUATE</p><h2>Your Halloween experience</h2><p><b>Goal:</b> answer aloud with a complete Present Perfect sentence and one extra detail.</p></div><button class="ghost" data-reset="speak">↺ Clear choices</button></div>
+      <div class="speaking-layout"><div><div class="prompt-card"><span id="speakNumber">Question 1 / 16</span><h3 id="speakPrompt">Which Halloween tradition have you never tried but would like to?</h3><p id="speakFrame">I’ve never…, but I’d like to because…</p></div><div class="prompt-controls"><button id="prevSpeak">← Previous</button><button id="randomSpeak">Pick one</button><button id="nextSpeak">Next →</button></div></div>
+      <aside class="choice-card"><p>Choose your top three</p><div id="topChoices"></div><small id="choiceCount">0 / 3 selected</small></aside></div>
+      <div class="stage-actions"><button class="back" data-next="4">← 4 Analyse</button><button class="next" data-next="6">6 Create →</button></div>
+    </section>
+
+    <section class="stage" data-panel="6">
+      <div class="stage-head"><div><p class="kicker">CREATE</p><h2>Your Halloween update</h2><p><b>Goal:</b> record a one-minute voice message to a friend. Use the support once, then try again without it.</p></div></div>
+      <div class="create-grid"><article class="script-card"><h3>Speaking support</h3><p>Hi! My Halloween <mark>has been</mark>…</p><p>I’ve <mark>already</mark>…</p><p>I’ve <mark>just</mark>…</p><p>I <mark>haven’t</mark>… <mark>yet</mark>.</p><p>I’ve <mark>never</mark>… <mark>before</mark>.</p><p><mark>So far</mark>, I’ve…</p><p><mark>Have you ever</mark>…?</p></article><article class="check-card"><h3>Check your message</h3><div id="finalChecklist"></div><button class="complete" id="completeLesson">Finish lesson</button></article></div>
+      <div class="second-attempt"><span>Second attempt</span><p>Record it again without the support. Aim for at least six Present Perfect sentences and a more natural rhythm.</p></div>
+      <div class="stage-actions"><button class="back" data-next="5">← 5 Speak</button><button class="next" data-next="results">★ My results</button></div>
+    </section>
+
+    <section class="stage" data-panel="results">
+      <div class="results-hero"><p class="kicker">MY RESULTS</p><h2 id="resultsTitle">Your Halloween grammar report</h2><p id="resultsMessage">Complete the activities to build your report.</p></div>
+      <div class="result-grid" id="resultGrid"></div>
+      <div class="stage-actions"><button class="back" data-next="0">← Return to the start</button><button class="ghost" id="resetAll">Reset all results</button></div>
+    </section>
+  </main>
+  <footer class="wrap"><span>Present Perfect · Halloween Lab</span><a href="#top">Back to top ↑</a></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
